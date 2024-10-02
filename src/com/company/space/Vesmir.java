@@ -34,7 +34,6 @@ public class Vesmir {
         state = true;
         System.out.println("Vesmir started");
         timer = new Timer();
-
         TimerTask task = new TimerTask(){
             public void run(){
                 if(GetState()){
