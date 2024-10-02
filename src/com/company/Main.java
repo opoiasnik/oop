@@ -17,7 +17,6 @@ public class Main {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         vesmir.endVesmir();
         Hmlovina hmlovina = new Hmlovina();
     }

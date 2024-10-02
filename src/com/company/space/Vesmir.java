@@ -8,7 +8,6 @@ public class Vesmir {
     private boolean state;
     private long size;
     private String nameAuthor;
-    private Timer timer;
 
     // Конструктор
     public Vesmir() {
@@ -33,25 +32,24 @@ public class Vesmir {
     public void startVesmir() {
         state = true;
         System.out.println("Vesmir started");
-        timer = new Timer();
-        TimerTask task = new TimerTask(){
-            public void run(){
-                if(GetState()){
+        new Thread(() -> {
+            while (state) {
+                try {
                     size += 999_000;
                     System.out.println("Current size: " + size + " km³");
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
-        };
-        timer.schedule(task, 0, 1000);
 
+        }).start();
     }
 
 
     public void endVesmir() {
         state = false;
-        if (timer != null) {
-            timer.cancel();
-        }
+
         System.out.println("Vesmir ended");
         GetSize();
     }
