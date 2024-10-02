@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.space.Hmlovina;
 import com.company.space.Vesmir;
 
 public class Main {
@@ -18,5 +19,6 @@ public class Main {
         }
 
         vesmir.endVesmir();
+        Hmlovina hmlovina = new Hmlovina();
     }
 }

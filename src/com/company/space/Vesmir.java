@@ -34,9 +34,10 @@ public class Vesmir {
         state = true;
         System.out.println("Vesmir started");
         timer = new Timer();
+
         TimerTask task = new TimerTask(){
             public void run(){
-                if(state){
+                if(GetState()){
                     size += 999_000;
                     System.out.println("Current size: " + size + " km³");
                 }
@@ -57,8 +58,9 @@ public class Vesmir {
     }
 
 
-    public void GetSize() {
+    public long GetSize() {
         System.out.println("Current size: " + size + " km³");
+        return size;
     }
 
 
