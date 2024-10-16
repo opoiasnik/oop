@@ -4,12 +4,14 @@ public class Hmlovina {
     private long size ;
     private long livingTime;
     private int x, y, z;
-    public Hmlovina() {
+    private String name = "";
+    public Hmlovina(String name) {
         size = 0;
         livingTime = 0;
         x = 0;
         y = 0;
         z = 0;
+        name = name;
     }
     public int getX() {
         return x;

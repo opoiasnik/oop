@@ -1,15 +1,14 @@
 package com.company.space;
 
 import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 public class Vesmir {
     private boolean state;
     private long size;
     private String nameAuthor;
 
-    // Конструктор
+
     public Vesmir() {
         state = false;
         size = 0;
@@ -65,7 +64,7 @@ public class Vesmir {
         return state;
     }
 
-    public void decreaseSize (long num) {
+    public void decreaseSize(long num) {
         size -= num;
     }
 }
